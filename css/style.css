@@ -107,8 +107,15 @@ img {
     color: var(--accent-color);
     }
  .active-page {
+     display: flex;
     color: var(--accent-color);
     }
+.active-page::after {
+    width: 78px;
+    height: 4px;
+    content: '';
+    background-color: var(--accent-color);
+}
 .nav-maill-info,
 .nav-tel-info {
     font-weight: 500;
