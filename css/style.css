@@ -106,6 +106,7 @@ img {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--main-font-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 .nav-list-link::after {
     display: none;
@@ -115,14 +116,13 @@ img {
     border-radius: 4px;
     margin-top: 28px;
     background-color: var(--accent-color);
-    
 }
 .nav-list-link:hover,
 .nav-list-link:focus {
     color: var(--accent-color);
-/*  */
     }
-.nav-list-link:hover::after {
+.nav-list-link:hover::after,
+.nav-list-link:focus::after {
     display: flex;
     position: absolute;
 }
@@ -146,6 +146,8 @@ img {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--secondary-font-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 .nav-maill-info:hover,
 .nav-maill-info:focus,
@@ -198,6 +200,7 @@ img {
     border: 1px ;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 .modal-btn:hover,
 .modal-btn:focus {
@@ -223,7 +226,6 @@ img {
     background-color: var(--team-background-color);
     border-radius: 4px;
     } 
-
 .about-container {
     display: flex;
     align-items: center;
@@ -253,6 +255,26 @@ img {
     display: flex;
     justify-content: space-between;
     }
+.services-list-item {
+    position: relative;
+}
+.services-list-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top:27px;
+    padding-bottom: 27px;
+    color: #FFFFFF;
+    font-family: var(--primary-font-family);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background-color: rgba(47, 48, 58, 0.8);
+}
 /* ======END ABOUT====== */
 /* ======START TEAM====== */
 .team {
@@ -307,6 +329,8 @@ img {
     }
 .team-card-networks-link {
     fill: #AFB1B8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 .team-card-networks-link:hover,
 .team-card-networks-link:focus {
@@ -333,6 +357,7 @@ img {
     }
 .customers-link {
     fill: #AFB1B8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 .customers-link:hover,
 .customers-link:focus {
@@ -381,6 +406,7 @@ img {
     }
 .footer-join-list-link {
     fill: var(--main-background-color);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 .footer-join-list-link:hover,
 .footer-join-list-link:focus {
@@ -422,6 +448,9 @@ img {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 500ms cubic-bezier(0.4, 0, 0.2, 1),
+                pointer-events 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
     opacity: 0;
@@ -439,7 +468,7 @@ img {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
                 0px 1px 1px rgba(0, 0, 0, 0.14), 
                 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 4px;
+    border-radius: 4px;
 }
 .modal-close-button {
     position: absolute;
@@ -478,6 +507,9 @@ border-radius: 4px;
     border: 0px solid;
     border-radius: 4px;
     padding: 6px 20px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
@@ -496,6 +528,7 @@ border-radius: 4px;
 .portfolio-group {
     margin-left: 30px;
     background: var(--main-background-color);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 .portfolio-group:hover,
 .portfolio-group:focus {
@@ -542,11 +575,10 @@ border-radius: 4px;
     line-height: 1,56;
     letter-spacing: 0.03em;
     color: #FFFFFF;
-    padding: 63px 24px;
-    font-style: normal;
+    padding: 63px 24px 63px 24px;
     overflow: auto;
     transform: translateY(100%);
-    transition: transform 250ms linear;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-group-link:hover .overlay,
 .portfolio-group-link:focus .overlay {
